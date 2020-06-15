@@ -21,7 +21,8 @@ def _get_widths_df():
     widths = {}
     widths['vw']  = volume_width
     widths['vlw'] = volume_linewidth
-    widths['cw']  = candle_width
+    widths['cw']  = tuple( [ v * 0.65 for v in volume_width ] )
+    # widths['cw']  = candle_width
     widths['clw'] = candle_linewidth
     widths['ow']  = ohlc_tickwidth
     widths['olw'] = ohlc_linewidth
